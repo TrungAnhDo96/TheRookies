@@ -9,14 +9,14 @@ namespace RK_A1
             ClassMembers classMembers = new ClassMembers();
             if (classMembers.getAllMembers().Count > 0)
             {
-                // Console.WriteLine();
-                // PrintMembersByGender(classMembers, Gender.Male);
+                Console.WriteLine();
+                PrintMembersByGender(classMembers, Gender.Male);
 
-                // Console.WriteLine("\n**************************************************\n");
-                // PrintOldestMember(classMembers);
+                Console.WriteLine("\n**************************************************\n");
+                PrintOldestMember(classMembers);
 
-                // Console.WriteLine("\n**************************************************\n");
-                // PrintMemberNames(classMembers);
+                Console.WriteLine("\n**************************************************\n");
+                PrintMemberNames(classMembers);
 
                 Console.WriteLine("\n**************************************************\n");
                 PrintMembersByBirthYearEquals(classMembers, 2000);
@@ -27,8 +27,8 @@ namespace RK_A1
                 Console.WriteLine("\n**************************************************\n");
                 PrintMembersByBirthYearLessThan(classMembers, 2000);
 
-                // Console.WriteLine("\n**************************************************\n");
-                // PrintMembersByBirthPlace(classMembers, "Ha Noi");
+                Console.WriteLine("\n**************************************************\n");
+                PrintMembersByBirthPlace(classMembers, "Ha Noi");
             }
             else
             {
@@ -43,7 +43,6 @@ namespace RK_A1
 
         static void PrintMembersByGender(ClassMembers members, Gender gender)
         {
-            //getMembersByGender(gender)
             List<Member> membersByGender = members.getMembersByGender(gender);
             if (membersByGender.Count > 0)
             {
@@ -61,14 +60,12 @@ namespace RK_A1
 
         static void PrintOldestMember(ClassMembers members)
         {
-            //getOldestMember()
             Console.WriteLine("Here is the detail of the oldest member:");
             PrintMemberSummary(members.getOldestMember());
         }
 
         static void PrintMemberNames(ClassMembers members)
         {
-            //getMemberNames()
             List<string> memberNames = members.getMemberNames();
             Console.WriteLine("Here is the list of members (full name only):");
             foreach (var name in memberNames)
@@ -79,7 +76,6 @@ namespace RK_A1
 
         static void PrintMembersByBirthYearEquals(ClassMembers members, uint year)
         {
-            //getMembersByYear(year, "equals")
             List<Member> membersWithYearEquals = members.getMembersByYear(year);
             if (membersWithYearEquals.Count > 0)
             {
@@ -97,7 +93,6 @@ namespace RK_A1
 
         static void PrintMembersByBirthYearGreaterThan(ClassMembers members, uint year)
         {
-            //getMembersByYear(year, "greater");
             List<Member> membersWithYearGreater = members.getMembersByYear(year, ">");
             if (membersWithYearGreater.Count > 0)
             {
@@ -115,7 +110,6 @@ namespace RK_A1
 
         static void PrintMembersByBirthYearLessThan(ClassMembers members, uint year)
         {
-            //getMembersByYear(year, "less");
             List<Member> membersWithYearLess = members.getMembersByYear(year, "<");
             if (membersWithYearLess.Count > 0)
             {
@@ -132,7 +126,6 @@ namespace RK_A1
         }
         static void PrintMembersByBirthPlace(ClassMembers members, string birthPlace)
         {
-            //getFirstMemberByBirthPlace(birthPlace);
             Member firstMemberByBirthPlace = members.getFirstMemberByBirthPlace(birthPlace);
             if (firstMemberByBirthPlace != null)
             {

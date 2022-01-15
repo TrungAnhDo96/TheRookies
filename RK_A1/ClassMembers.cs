@@ -51,8 +51,6 @@ namespace RK_A1
                 new Member("Nguyen","Tien Truong",Gender.Male,"01/01/2000", "0968034684"),
                 new Member("Nguyen","Van A",Gender.None,"01/01/")
             };
-
-            //_members.Sort((x, y) => string.Compare(x.FullName(), y.FullName()));
         }
 
         public List<Member> getAllMembers()
@@ -62,7 +60,6 @@ namespace RK_A1
 
         public List<Member> getMembersByGender(Gender gender)
         {
-            //List<Member> result = _members.FindAll(member => member.Gender == Gender.Male); ;
             List<Member> result = new List<Member>();
 
             foreach (Member member in _members)
@@ -139,7 +136,6 @@ namespace RK_A1
 
         public Member getFirstMemberByBirthPlace(string birthPlace)
         {
-            //Member result = _members.Find(member => member.BirthPlace == birthPlace);
             Member result = null;
             int index = 0;
 
