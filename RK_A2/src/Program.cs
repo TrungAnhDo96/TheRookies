@@ -13,26 +13,26 @@ namespace RK_A2
             MemberService memberService = new MemberService();
             if (memberService.GetAllMembers().Count > 0)
             {
-                // Console.WriteLine();
-                // PrintMembersByGender(memberService, Gender.Male);
-
-                // Console.WriteLine("\n**************************************************\n");
-                // PrintOldestMember(memberService);
-
-                // Console.WriteLine("\n**************************************************\n");
-                // PrintMemberNames(memberService);
-
-                // Console.WriteLine("\n**************************************************\n");
-                // PrintMembersByBirthYearEquals(memberService, 2000);
-
-                // Console.WriteLine("\n**************************************************\n");
-                // PrintMembersByBirthYearGreaterThan(memberService, 2000);
-
-                // Console.WriteLine("\n**************************************************\n");
-                // PrintMembersByBirthYearLessThan(memberService, 2000);
+                Console.WriteLine();
+                PrintMembersByGender(memberService, Gender.Male);
 
                 Console.WriteLine("\n**************************************************\n");
-                PrintMembersByBirthPlace(memberService, "Ca Mau");
+                PrintOldestMember(memberService);
+
+                Console.WriteLine("\n**************************************************\n");
+                PrintMemberNames(memberService);
+
+                Console.WriteLine("\n**************************************************\n");
+                PrintMembersByBirthYearEquals(memberService, 2000);
+
+                Console.WriteLine("\n**************************************************\n");
+                PrintMembersByBirthYearGreaterThan(memberService, 2000);
+
+                Console.WriteLine("\n**************************************************\n");
+                PrintMembersByBirthYearLessThan(memberService, 2000);
+
+                Console.WriteLine("\n**************************************************\n");
+                PrintMembersByBirthPlace(memberService, "Ha Noi");
             }
             else
             {

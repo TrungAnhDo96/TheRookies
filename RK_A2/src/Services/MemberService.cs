@@ -16,9 +16,9 @@ namespace RK_A2.Services
         private void InitMembers()
         {
             _members = new List<Member>() {
-                new Member("Do", "Trung Anh", Gender.Male, "12/08/1996", "0422061033"),
+                new Member("Do", "Trung Anh", Gender.Male, "12/08/1996", "0422061033", "Ha Noi", true),
                 new Member("Nguyen", "Van Phuc", Gender.Male, "01/01/2000", "0966416708"),
-                new Member("Do", "Ngoc Anh", Gender.Male, "01/01/1994", "0962828299", "Ha Noi", true),
+                new Member("Do", "Ngoc Anh", Gender.Male, "01/01/1994", "0962828299", "", true),
                 new Member("Pham", "Duc Loc", Gender.Male, "01/01/1999", "0343428821"),
                 new Member("Pham", "Thanh Long", Gender.Male, "01/01/2000", "0944531628", "Ha Noi"),
                 new Member("Chu Ky", "Giang Son", Gender.Male, "01/01/1998", "0963164813"),
