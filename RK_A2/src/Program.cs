@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+
+using RK_A2.Services;
+using RK_A2.Entities;
+
 namespace RK_A2
 {
     class Program
@@ -9,26 +13,26 @@ namespace RK_A2
             MemberService memberService = new MemberService();
             if (memberService.GetAllMembers().Count > 0)
             {
-                Console.WriteLine();
-                PrintMembersByGender(memberService, Gender.Male);
+                // Console.WriteLine();
+                // PrintMembersByGender(memberService, Gender.Male);
+
+                // Console.WriteLine("\n**************************************************\n");
+                // PrintOldestMember(memberService);
+
+                // Console.WriteLine("\n**************************************************\n");
+                // PrintMemberNames(memberService);
+
+                // Console.WriteLine("\n**************************************************\n");
+                // PrintMembersByBirthYearEquals(memberService, 2000);
+
+                // Console.WriteLine("\n**************************************************\n");
+                // PrintMembersByBirthYearGreaterThan(memberService, 2000);
+
+                // Console.WriteLine("\n**************************************************\n");
+                // PrintMembersByBirthYearLessThan(memberService, 2000);
 
                 Console.WriteLine("\n**************************************************\n");
-                PrintOldestMember(memberService);
-
-                Console.WriteLine("\n**************************************************\n");
-                PrintMemberNames(memberService);
-
-                Console.WriteLine("\n**************************************************\n");
-                PrintMembersByBirthYearEquals(memberService, 2000);
-
-                Console.WriteLine("\n**************************************************\n");
-                PrintMembersByBirthYearGreaterThan(memberService, 2000);
-
-                Console.WriteLine("\n**************************************************\n");
-                PrintMembersByBirthYearLessThan(memberService, 2000);
-
-                Console.WriteLine("\n**************************************************\n");
-                PrintMembersByBirthPlace(memberService, "Ha Noi");
+                PrintMembersByBirthPlace(memberService, "Ca Mau");
             }
             else
             {
@@ -47,10 +51,7 @@ namespace RK_A2
             if (membersByGender.Count > 0)
             {
                 Console.WriteLine("Here is a list of members who are " + gender.ToString().ToLower() + ": ");
-                foreach (var member in membersByGender)
-                {
-                    PrintMemberSummary(member);
-                }
+                membersByGender.ForEach(member => { PrintMemberSummary(member); });
             }
             else
             {
@@ -68,10 +69,7 @@ namespace RK_A2
         {
             List<string> memberNames = service.GetMemberNames();
             Console.WriteLine("Here is the list of members (full name only):");
-            foreach (var name in memberNames)
-            {
-                Console.WriteLine("     " + name);
-            }
+            memberNames.ForEach(name => { Console.WriteLine("     " + name); });
         }
 
         static void PrintMembersByBirthYearEquals(MemberService service, uint year)
@@ -80,10 +78,7 @@ namespace RK_A2
             if (membersWithYearEquals.Count > 0)
             {
                 Console.WriteLine("Here is the list of members whose birth year equals " + year + ": ");
-                foreach (Member member in membersWithYearEquals)
-                {
-                    PrintMemberSummary(member);
-                }
+                membersWithYearEquals.ForEach(member => { PrintMemberSummary(member); });
             }
             else
             {
@@ -97,10 +92,7 @@ namespace RK_A2
             if (membersWithYearGreater.Count > 0)
             {
                 Console.WriteLine("Here is the list of members whose birth year is greater than " + year + ": ");
-                foreach (Member member in membersWithYearGreater)
-                {
-                    PrintMemberSummary(member);
-                }
+                membersWithYearGreater.ForEach(member => { PrintMemberSummary(member); });
             }
             else
             {
@@ -114,10 +106,7 @@ namespace RK_A2
             if (membersWithYearLess.Count > 0)
             {
                 Console.WriteLine("Here is the list of members whose birth year is less than " + year + ": ");
-                foreach (Member member in membersWithYearLess)
-                {
-                    PrintMemberSummary(member);
-                }
+                membersWithYearLess.ForEach(member => { PrintMemberSummary(member); });
             }
             else
             {

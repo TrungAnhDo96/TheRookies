@@ -1,15 +1,7 @@
 using System;
 
-namespace RK_A2
+namespace RK_A2.Entities
 {
-
-    public enum Gender
-    {
-        None = 0,
-        Male = 1,
-        Female = 2,
-    }
-
     class Member
     {
         public Member(string firstName, string lastName, Gender gender, string dob, string phoneNumber = "", string birthPlace = "", bool isGraduated = false)

@@ -1,18 +1,19 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RK_A2
+using RK_A2.Entities;
+
+namespace RK_A2.Services
 {
     class MemberService
     {
         private List<Member> _members;
         public MemberService()
         {
-            GenerateMemberService();
+            InitMembers();
         }
 
-        private void GenerateMemberService()
+        private void InitMembers()
         {
             _members = new List<Member>() {
                 new Member("Do", "Trung Anh", Gender.Male, "12/08/1996", "0422061033"),
@@ -64,23 +65,22 @@ namespace RK_A2
             IEnumerable<Member> linq = from member in _members
                                        where member.Gender == Gender.Male
                                        select member;
-            List<Member> result = linq.ToList<Member>();
+
+            List<Member> result = linq.ToList();
 
             return result;
         }
 
         public Member GetOldestMember()
         {
-            Member result = _members.OrderByDescending(member => member.Age).FirstOrDefault();
+            uint maxAge = _members.Max(member => member.Age);
 
-            return result;
+            return _members.FirstOrDefault(member => member.Age == maxAge);
         }
 
         public List<string> GetMemberNames()
         {
-            IEnumerable<string> linq = from member in _members
-                                       select member.FullName;
-            List<string> result = linq.ToList<string>();
+            List<string> result = _members.Select(member => member.FullName).ToList();
 
             return result;
         }
@@ -92,7 +92,7 @@ namespace RK_A2
             switch (compareOperator)
             {
                 case "==":
-                    result = _members.FindAll(member => member.DOB_Date.Year == year);
+                    result = _members.Where(member => member.DOB_Date.Year == year).ToList();
                     break;
                 case ">":
                     result = _members.FindAll(member => member.DOB_Date.Year > year);
