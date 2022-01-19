@@ -53,12 +53,12 @@ namespace RK_A1
             };
         }
 
-        public List<Member> getAllMembers()
+        public List<Member> GetAllMembers()
         {
             return _members;
         }
 
-        public List<Member> getMembersByGender(Gender gender)
+        public List<Member> GetMembersByGender(Gender gender)
         {
             List<Member> result = new List<Member>();
 
@@ -71,7 +71,7 @@ namespace RK_A1
             return result;
         }
 
-        public Member getOldestMember()
+        public Member GetOldestMember()
         {
             Member result = null;
 
@@ -91,7 +91,7 @@ namespace RK_A1
             return result;
         }
 
-        public List<string> getMemberNames()
+        public List<string> GetMemberNames()
         {
             List<string> result = new List<string>();
 
@@ -103,7 +103,7 @@ namespace RK_A1
             return result;
         }
 
-        public List<Member> getMembersByYear(uint year, string compareOperator = "==")
+        public List<Member> GetMembersByYear(uint year, string compareOperator = "==")
         {
             List<Member> result = new List<Member>();
 
@@ -134,7 +134,7 @@ namespace RK_A1
             return result;
         }
 
-        public Member getFirstMemberByBirthPlace(string birthPlace)
+        public Member GetFirstMemberByBirthPlace(string birthPlace)
         {
             Member result = null;
             int index = 0;
