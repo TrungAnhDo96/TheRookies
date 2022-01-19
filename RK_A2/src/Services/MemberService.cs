@@ -100,8 +100,6 @@ namespace RK_A2.Services
                 case "<":
                     result = _members.FindAll(member => member.DOB_Date.Year < year);
                     break;
-                default:
-                    break;
             }
 
             return result;
