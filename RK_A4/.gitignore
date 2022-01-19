@@ -1,0 +1,6 @@
+# Build config and results
+bin/*
+obj/*
+.vscode/*
+Properties/*
+wwwroot/*
