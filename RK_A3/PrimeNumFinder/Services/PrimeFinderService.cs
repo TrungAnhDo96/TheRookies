@@ -21,7 +21,7 @@ namespace PrimeNumFinder
             Task[] tasks = new Task[_max - _min + 1];
             for (int i = _min; i <= _max; i++)
             {
-                tasks[i] = Task.Run(() => CollectValidPrimeNumberAsync(i));
+                tasks[i] = Task.Run(() => CollectValidPrimeNumber(i));
             }
             Task.WaitAll(tasks);
         }
@@ -30,11 +30,11 @@ namespace PrimeNumFinder
         {
             for (int i = _min; i <= _max; i++)
             {
-                CollectValidPrimeNumberAsync(i);
+                CollectValidPrimeNumber(i);
             }
         }
 
-        private void CollectValidPrimeNumberAsync(int num)
+        private void CollectValidPrimeNumber(int num)
         {
             if (IsPrimeNumber(num))
                 _primeNumbers.Add(num);
