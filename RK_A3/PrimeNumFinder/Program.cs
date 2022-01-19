@@ -9,15 +9,16 @@ namespace PrimeNumFinder
         static void Main(string[] args)
         {
             PrimeFinderService service = new PrimeFinderService(0, 100000);
-            Stopwatch watch = new Stopwatch();
+            service.FindPrimeNumbers();
+            //Stopwatch watch = new Stopwatch();
 
-            long synchronousElapsed = MeasureExeTime(() => service.FindPrimeNumbers(), watch);
-            Console.WriteLine("Synchronous Prime Number Search time: " + synchronousElapsed);
+            //long synchronousElapsed = MeasureExeTime(() => service.FindPrimeNumbers(), watch);
+            //Console.WriteLine("Synchronous Prime Number Search time: " + synchronousElapsed);
 
-            long asynchronousElapsed = MeasureExeTime(() => service.FindPrimeNumbersWithAsync(), watch);
-            Console.WriteLine("Asynchronous Prime Number Search time: " + asynchronousElapsed);
+            //long asynchronousElapsed = MeasureExeTime(() => service.FindPrimeNumbersWithAsync(), watch);
+            //Console.WriteLine("Asynchronous Prime Number Search time: " + asynchronousElapsed);
 
-            //PrintPrimeNumbers(service);
+            PrintPrimeNumbers(service);
         }
 
         static long MeasureExeTime(Action action, Stopwatch watch)
