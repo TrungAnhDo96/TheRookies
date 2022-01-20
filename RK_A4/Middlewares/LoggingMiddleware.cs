@@ -17,12 +17,12 @@ namespace RK_A4.Middlewares
         {
             HttpRequest request = context.Request;
             HttpResponse response = context.Response;
-            //Stream stream = context.Response.Body;
-
             using var buffer = new MemoryStream();
             var stream = response.Body;
             response.Body = buffer;
+
             await _next(context);
+
             string log = "Schema: " + request.Scheme +
                 "\nHost: " + request.Host +
                 "\nPath: " + request.Path +
@@ -31,7 +31,6 @@ namespace RK_A4.Middlewares
             Debug.Write(log);
 
             buffer.Position = 0;
-
             await buffer.CopyToAsync(stream);
         }
     }
