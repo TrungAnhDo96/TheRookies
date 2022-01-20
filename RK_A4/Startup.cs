@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RK_A4.Middlewares;
 
 namespace RK_A4
 {
@@ -19,23 +19,23 @@ namespace RK_A4
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseLoggingMiddleware();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
             else
             {
-                app.UseExceptionHandler("/Error");
+                app.UseExceptionHandler("/Logging/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -43,16 +43,11 @@ namespace RK_A4
 
             app.UseAuthorization();
 
-            app.UseCustomMiddleware();
-
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
-            });
-
-            app.Run(async context =>
-            {
-                await context.Response.WriteAsync("A response");
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Logging}/{action=Index}/{id?}");
             });
         }
     }

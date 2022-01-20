@@ -19,13 +19,11 @@ C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.RazorAssemb
 C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.TagHelpers.input.cache
 C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.TagHelpers.output.cache
 C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.RazorCoreGenerate.cache
-C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
-C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
-C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
-C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
-C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
-C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.RazorTargetAssemblyInfo.cache
 C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.RazorTargetAssemblyInfo.cs
 C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.Views.pdb
@@ -35,3 +33,5 @@ C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.dll
 C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.pdb
 C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.genruntimeconfig.cache
 C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\RK_A4.csproj.CopyComplete
+C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Views\Logging\Index.cshtml.g.cs
+C:\Users\Trung Anh Do\TheRookies\RK_A4\obj\Debug\netcoreapp3.1\Razor\Views\Logging\Privacy.cshtml.g.cs
