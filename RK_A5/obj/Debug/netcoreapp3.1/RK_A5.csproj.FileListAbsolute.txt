@@ -38,3 +38,7 @@ C:\Users\Trung Anh Do\TheRookies\RK_A5\obj\Debug\netcoreapp3.1\Razor\Views\Home\
 C:\Users\Trung Anh Do\TheRookies\RK_A5\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Trung Anh Do\TheRookies\RK_A5\obj\Debug\netcoreapp3.1\Razor\Views\Rookies\Index.cshtml.g.cs
 C:\Users\Trung Anh Do\TheRookies\RK_A5\obj\Debug\netcoreapp3.1\Razor\Views\Rookies\BirthYearPage.cshtml.g.cs
+C:\Users\Trung Anh Do\TheRookies\RK_A5\bin\Debug\netcoreapp3.1\ClosedXML.dll
+C:\Users\Trung Anh Do\TheRookies\RK_A5\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+C:\Users\Trung Anh Do\TheRookies\RK_A5\bin\Debug\netcoreapp3.1\ExcelNumberFormat.dll
+C:\Users\Trung Anh Do\TheRookies\RK_A5\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll

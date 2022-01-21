@@ -1,11 +1,12 @@
 using System.Collections.Generic;
-using System.Linq;
 using RK_A5.Enums;
 using RK_A5.Interfaces;
 using RK_A5.Entities;
 using RK_A5.Services;
 using RK_A5.Utilities;
 using RK_A5.Models;
+using System.Data;
+using System.Linq;
 
 namespace RK_A5.Facades
 {
@@ -66,6 +67,18 @@ namespace RK_A5.Facades
         public List<PersonModel> GetAllPeople()
         {
             return _service.Read().ConvertAll(person => (PersonModel)person);
+        }
+
+        public DataTable GetDataTable()
+        {
+            DataTable table = new DataTable();
+            table.Columns.AddRange(new DataColumn[7] { new DataColumn("FirstName"), new DataColumn("LastName"), new DataColumn("Gender"), new DataColumn("DOB"), new DataColumn("Phone"), new DataColumn("BirthPlace"), new DataColumn("IsGraduated") });
+            foreach (PersonModel person in GetAllPeople())
+            {
+                table.Rows.Add(person.FirstName, person.LastName);
+            }
+
+            return table;
         }
     }
 }

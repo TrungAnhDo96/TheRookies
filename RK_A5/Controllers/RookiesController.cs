@@ -1,12 +1,11 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.IO;
+using ClosedXML.Excel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RK_A5.Enums;
 using RK_A5.Facades;
 using RK_A5.Interfaces;
-using RK_A5.Models;
 
 namespace RK_A5.Controllers
 {
@@ -48,16 +47,18 @@ namespace RK_A5.Controllers
             return View();
         }
 
-        public IActionResult Export()
+        public FileResult ExportExcel()
         {
-            var builder = new StringBuilder();
-            builder.AppendLine("FirstName,LastName,Gender,DOB,Phone,BirthPlace,Graduated");
-            foreach (var person in _facade.GetAllPeople())
+            var table = _facade.GetDataTable();
+            using (XLWorkbook wb = new XLWorkbook())
             {
-                builder.AppendLine($"{person.FirstName},{person.LastName},{person.Gender},{person.DateOfBirth},{person.PhoneNumber},{person.BirthPlace},{person.IsGraduated}");
+                wb.Worksheets.Add(table, "PeopleWorksheet");
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    wb.SaveAs(stream);
+                    return File(stream.ToArray(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "People.xlsx");
+                }
             }
-
-            return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "people.csv");
         }
 
         public IActionResult Index()

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using RK_A5.Models;
 using RK_A5.Enums;
+using System.Data;
 
 namespace RK_A5.Interfaces
 {
@@ -19,5 +20,7 @@ namespace RK_A5.Interfaces
         List<PersonModel> GetPeopleByBirthYearLess(int year);
 
         List<PersonModel> GetAllPeople();
+
+        DataTable GetDataTable();
     }
 }

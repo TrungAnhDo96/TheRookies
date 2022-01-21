@@ -1,5 +1,3 @@
-using RK_A5.Enums;
-
 namespace RK_A5.Models
 {
     public class PersonModel
