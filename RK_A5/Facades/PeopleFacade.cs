@@ -75,9 +75,8 @@ namespace RK_A5.Facades
             table.Columns.AddRange(new DataColumn[7] { new DataColumn("FirstName"), new DataColumn("LastName"), new DataColumn("Gender"), new DataColumn("DOB"), new DataColumn("Phone"), new DataColumn("BirthPlace"), new DataColumn("IsGraduated") });
             foreach (PersonModel person in GetAllPeople())
             {
-                table.Rows.Add(person.FirstName, person.LastName);
+                table.Rows.Add(person.FirstName, person.LastName, person.Gender, person.DateOfBirth, person.PhoneNumber, person.BirthPlace, person.IsGraduated);
             }
-
             return table;
         }
     }
