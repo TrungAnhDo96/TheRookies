@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 
 namespace RK_A4.Controllers
 {
-    //[Route("[controller]")]
     public class LoggingController : Controller
     {
         private readonly ILogger<LoggingController> _logger;

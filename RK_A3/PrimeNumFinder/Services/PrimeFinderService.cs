@@ -23,6 +23,7 @@ namespace PrimeNumFinder
             {
                 tasks[i] = Task.Run(() => CollectValidPrimeNumber(i));
             }
+
             Task.WaitAll(tasks);
         }
 

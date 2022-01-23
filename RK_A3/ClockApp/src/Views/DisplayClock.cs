@@ -7,10 +7,10 @@ namespace ClockApp.Views
     {
         public void Subscribe(Clock clock)
         {
-            clock.clockTick += new Clock.clockTickHandler(showClock);
+            clock.clockTick += new Clock.clockTickHandler(ShowClock);
         }
 
-        public void showClock(object clock, TimeInfoEventArgs timeInfo)
+        public void ShowClock(object clock, TimeInfoEventArgs timeInfo)
         {
             Console.WriteLine("Current Time: " + timeInfo.hour + ":" + timeInfo.minute + ":" + timeInfo.second);
         }

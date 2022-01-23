@@ -19,27 +19,12 @@ namespace RK_A5.Services
             PeopleDB.Instance.Connected = false;
         }
 
-        public void Create(PersonModel model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<Person> Read()
         {
             OpenCon();
             List<Person> result = PeopleDB.Instance.PeopleList;
             CloseCon();
             return result;
-        }
-
-        public void Update(int id, Person newPerson)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 }

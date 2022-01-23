@@ -24,6 +24,5 @@ namespace RK_A5.Utilities
             DateTime.TryParse(date, out result);
             return result;
         }
-
     }
 }

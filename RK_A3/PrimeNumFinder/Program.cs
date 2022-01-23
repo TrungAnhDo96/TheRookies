@@ -10,13 +10,6 @@ namespace PrimeNumFinder
         {
             PrimeFinderService service = new PrimeFinderService(0, 100000);
             service.FindPrimeNumbers();
-            //Stopwatch watch = new Stopwatch();
-
-            //long synchronousElapsed = MeasureExeTime(() => service.FindPrimeNumbers(), watch);
-            //Console.WriteLine("Synchronous Prime Number Search time: " + synchronousElapsed);
-
-            //long asynchronousElapsed = MeasureExeTime(() => service.FindPrimeNumbersWithAsync(), watch);
-            //Console.WriteLine("Asynchronous Prime Number Search time: " + asynchronousElapsed);
 
             PrintPrimeNumbers(service);
         }
