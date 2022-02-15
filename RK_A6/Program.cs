@@ -40,12 +40,12 @@ app.MapControllerRoute(
     defaults: new { controller = "Rookies", action = "NamePage" });
 app.MapControllerRoute(
     name: "Members",
-    pattern: "Rookies/Members",
-    defaults: new { controller = "Rookies", action = "Members" });
+    pattern: "People/Members",
+    defaults: new { controller = "People", action = "Members" });
 app.MapControllerRoute(
     name: "Add",
-    pattern: "Rookies/Add",
-    defaults: new { controller = "Rookies", action = "Add" });
+    pattern: "Person/Add",
+    defaults: new { controller = "People", action = "Add" });
 app.MapControllerRoute(
     name: "Oldest",
     pattern: "Rookies/Oldest",

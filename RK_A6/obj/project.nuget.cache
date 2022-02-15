@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0Poy/VEDq2EelNe9V+rtlgnvCRBNpWx8ooLjUgr4vujy2oHh2N3amp1h1C4MRkQk+EdKn7ToovbTpksYGI+yig==",
+  "dgSpecHash": "nuhRRevnee9n3bTFGVO/EILvJQLRJTMEmsExOExl1OrsTXJbsUnLU0L0GS5rUkftu9kTf0sdXaFJqZnRgcYWZw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A6\\RK_A6.csproj",
+  "projectFilePath": "C:\\Users\\Trung Anh Do\\TheRookies\\RK_A6\\RK_A6.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Trung Anh Do\\.nuget\\packages\\closedxml\\0.95.4\\closedxml.0.95.4.nupkg.sha512",
     "C:\\Users\\Trung Anh Do\\.nuget\\packages\\documentformat.openxml\\2.7.2\\documentformat.openxml.2.7.2.nupkg.sha512",

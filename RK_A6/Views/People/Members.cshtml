@@ -1,0 +1,47 @@
+@model IEnumerable<RK_A6.Models.PersonModel>
+@{
+    ViewData["Title"] = "Members";
+}
+
+<div class="text-center">
+    <h1 class="display-4">List of members</h1>
+
+    @* <p>
+        <a asp-controller="Rookies" asp-action="Add">Add new members</a>
+        </p> *@
+    <p>
+        @Html.ActionLink("Add new member", "Add")
+    </p>
+    @using (Html.BeginForm("DeletePerson", "People", FormMethod.Post, new { @id = "Form1" }))
+    {
+        <table class="table">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Date Of Birth</th>
+                <th>Age</th>
+                <th>Phone Number</th>
+                <th>BirthPlace</th>
+                <th>Graduated</th>
+                <th>Actions</th>
+            </tr>
+            @foreach (var member in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => member.FirstName)</td>
+                    <td>@Html.DisplayFor(modelItem => member.LastName)</td>
+                    <td>@Html.DisplayFor(modelItem => member.Gender)</td>
+                    <td>@Html.DisplayFor(modelItem => member.DateOfBirth)</td>
+                    <td>@Html.DisplayFor(modelItem => member.Age)</td>
+                    <td>@Html.DisplayFor(modelItem => member.PhoneNumber)</td>
+                    <td>@Html.DisplayFor(modelItem => member.BirthPlace)</td>
+                    <td>@Html.DisplayFor(modelItem => member.IsGraduated)</td>
+                    <td>@Html.ActionLink("Edit", "Edit", new { id=member.Id}) | @Html.ActionLink("Delete", "Delete", new {
+                id=member.Id})
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+</div>

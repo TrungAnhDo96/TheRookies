@@ -22,5 +22,11 @@ namespace RK_A6.Utilities
             DateTime.TryParse(date, out result);
             return result;
         }
+
+        public static string dateToYMD(string dateString)
+        {
+            DateTime date = ParseDate(dateString);
+            return date.ToString("yyyy-MM-dd");
+        }
     }
 }
