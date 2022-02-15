@@ -1,0 +1,60 @@
+@model RK_A6.Models.PersonModel
+@{
+    ViewData["Title"] = "Add members";
+}
+
+<div>
+    <h1 class="display-4 text-center">Add New Member</h1>
+
+    <form class="form-horizontal" action="Add" method="post">
+        <div class="form-group">
+            <label for="firstName">First Name: </label>
+            <input type="text" class="form-control" id="firstName" name="firstName" />
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name: </label>
+            <input type="text" class="form-control" id="lastName" name="lastName" />
+        </div>
+
+        <div class="form-group">
+            <label for="genders">Gender: </label>
+            <select class="form-control" name="genders" id="genders">
+                <option value="None" selected>Please select a gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date Of Birth </label>
+            <input type="date" class="form-control" id="dob" name="dob" />
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number: </label>
+            <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" />
+        </div>
+
+        <div class="form-group">
+            <label for="birthPlace">Birth Place: </label>
+            <input type="text" class="form-control" id="birthPlace" name="birthPlace" />
+        </div>
+
+        <div class="form-group">
+            <label>Have you graduated? </label>
+            <div class="form-check">
+                <input type="radio" id="yes" name="graduated" value="Yes" />
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="graduated" value="No" />
+                <label for="no">No</label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <p>
+        <a asp-controller="Rookies" asp-action="Members">Return to list</a>
+    </p>
+</div>
