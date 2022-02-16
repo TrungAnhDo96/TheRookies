@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Delete Confirmation";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Delete Success</h1>
+
+    <p>
+        Member @ViewBag.DeletedName was removed from the list successfully!
+    </p>
+
+    <p>
+        @Html.ActionLink("Return to list", "Members")
+    </p>
+</div>
