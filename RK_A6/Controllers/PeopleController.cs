@@ -47,13 +47,14 @@ namespace RK_A6.Controllers
             {
                 data = _facade.GetPerson(id);
             }
+            data.Id = id;
             return View(data);
         }
 
         [HttpPost]
         public IActionResult Edit(PersonModel model)
         {
-            _facade.AddPerson(model);
+            _facade.EditPerson(model);
 
             return RedirectToAction("Members");
         }

@@ -8,73 +8,73 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RK_A6
 build_property.RootNamespace = RK_A6
-build_property.ProjectDir = c:\Users\Trung Anh Do\TheRookies\RK_A6\
+build_property.ProjectDir = C:\Users\Trung Anh Do\TheRookies\RK_A6\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\Trung Anh Do\TheRookies\RK_A6
+build_property.MSBuildProjectDirectory = C:\Users\Trung Anh Do\TheRookies\RK_A6
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Home/Index.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Home/Privacy.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/People/Add.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/People/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/People/Delete.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/People/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/People/Edit.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/People/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/People/Members.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/People/Members.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVvcGxlXE1lbWJlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Rookies/BirthYearPage.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Rookies/BirthYearPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xCaXJ0aFllYXJQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Rookies/GenderPage.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Rookies/GenderPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xHZW5kZXJQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Rookies/Index.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Rookies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Rookies/NamePage.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Rookies/NamePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xOYW1lUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Rookies/Oldest.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Rookies/Oldest.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9va2llc1xPbGRlc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Shared/Error.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Shared/_Layout.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/_ViewImports.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Trung Anh Do/TheRookies/RK_A6/Views/_ViewStart.cshtml]
+[C:/Users/Trung Anh Do/TheRookies/RK_A6/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

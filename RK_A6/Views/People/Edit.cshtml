@@ -12,6 +12,11 @@
     @using (Html.BeginForm("Edit", "People", FormMethod.Post, new { @id = "Edit" }))
     {
         <div class="form-group">
+            <label for="Id">ID: </label>
+            <input type="text" class="form-control" id="Id" name="Id" value="@Model.Id" readonly/>
+        </div>
+
+        <div class="form-group">
             <label for="firstName">First Name: </label>
             <input type="text" class="form-control" id="firstName" name="firstName" value="@Model.FirstName" />
         </div>
@@ -24,7 +29,7 @@
         <div class="form-group">
             <label for="gender">Gender: </label>
             @Html.DropDownListFor(m => m.Gender, new SelectList(Enum.GetValues(typeof(@Gender)), Model.Gender), new {
-        @class="form-select"});
+        @class="form-select"})
         </div>
 
         <div class="form-group">
