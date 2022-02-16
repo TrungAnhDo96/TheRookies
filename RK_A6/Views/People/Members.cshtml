@@ -6,9 +6,6 @@
 <div class="text-center">
     <h1 class="display-4">List of members</h1>
 
-    @* <p>
-        <a asp-controller="Rookies" asp-action="Add">Add new members</a>
-        </p> *@
     <p>
         @Html.ActionLink("Add new member", "Add")
     </p>
@@ -26,7 +23,7 @@
                 <th>Graduated</th>
                 <th>Actions</th>
             </tr>
-            @foreach (var member in Model)
+            @foreach (var member in @Model)
             {
                 <tr>
                     <td>@Html.DisplayFor(modelItem => member.FirstName)</td>

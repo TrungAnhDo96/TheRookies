@@ -24,8 +24,7 @@ namespace RK_A6.Controllers
         public IActionResult Members()
         {
             var data = _facade.GetAllPeople();
-            ViewBag.Members = data;
-            return View();
+            return View(data);
         }
 
         public IActionResult Add()
@@ -48,8 +47,7 @@ namespace RK_A6.Controllers
             {
                 data = _facade.GetPerson(id);
             }
-            ViewBag.MemberToEdit = data;
-            return View();
+            return View(data);
         }
 
         [HttpPost]
