@@ -1,3 +1,4 @@
+@using RK_A6.Enums;
 @model RK_A6.Models.PersonModel
 @{
     ViewData["Title"] = "Add members";
@@ -18,12 +19,8 @@
         </div>
 
         <div class="form-group">
-            <label for="genders">Gender: </label>
-            <select class="form-control" name="gender" id="gender">
-                <option value="None" selected>Please select a gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-            </select>
+            <label for="gender">Gender: </label>
+            @Html.DropDownListFor(m => m.Gender, new SelectList(Enum.GetValues(typeof(@Gender))),"Please Select a gender", new { @class="form-select"})
         </div>
 
         <div class="form-group">
