@@ -88,6 +88,16 @@ namespace RK_A6.Controllers
             return RedirectToAction("DeleteConfirmation");
         }
 
+        [HttpPost]
+        public IActionResult DeletePerson(PersonModel model)
+        {
+            PersonModel fullModel = _facade.GetPerson(model.Id);
+            HttpContext.Session.SetString("DeletedName", fullModel.FirstName + ' ' + fullModel.LastName);
+            _facade.DeletePerson(fullModel);
+
+            return RedirectToAction("DeleteConfirmation");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
