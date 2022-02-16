@@ -47,10 +47,10 @@
         <div class="form-group">
             <label>Have you graduated? </label>
             <div class="form-check">
-                <input type="radio" id="yes" name="graduated" value="Yes" checked="@Model.IsGraduated=='Yes'" />
-                <label for="yes">Yes</label>
-                <input type="radio" id="no" name="graduated" value="No" checked="@Model.IsGraduated=='No'" />
-                <label for="no">No</label>
+                @Html.RadioButtonFor(m => m.IsGraduated,"Yes")
+                <label for="Yes">Yes</label>
+                @Html.RadioButtonFor(m => m.IsGraduated,"No")
+                <label for="No">No</label>
             </div>
         </div>
 
