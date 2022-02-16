@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using RK_A6.Facades;
 using RK_A6.Interfaces;
 using RK_A6.Models;
+using RK_A6.Utilities;
 
 namespace RK_A6.Controllers
 {
@@ -54,6 +55,8 @@ namespace RK_A6.Controllers
         [HttpPost]
         public IActionResult Edit(PersonModel model)
         {
+            DateTime inputDate = DateAgeUtility.ParseDate(model.DateOfBirth);
+            model.DateOfBirth = inputDate.ToString("dd/MM/yyyy");
             _facade.EditPerson(model);
 
             return RedirectToAction("Members");
