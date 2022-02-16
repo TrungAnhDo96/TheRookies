@@ -1,3 +1,4 @@
+@model IEnumerable<RK_A7.Models.PersonModel>;
 @{
     ViewData["Title"] = "Members";
 }
@@ -5,7 +6,7 @@
 <div>
     <h1 class="display-4">List of members</h1>
     <p>
-        <a href="#add">Jump to add</a>
+        <a href="#bottom">Jump to bottom</a>
     </p>
 
     <table class="table">
@@ -13,7 +14,7 @@
             <th>ID</th>
             <th>Name</th>
         </tr>
-        @foreach (var member in ViewBag.Members)
+        @foreach (var member in @Model)
         {
             var fullname = member.FirstName + ' ' + member.LastName;
 
@@ -24,6 +25,6 @@
         }
     </table>
     <p>
-        @Html.ActionLink("Add new members", "Add", "People", null, new {id="add"})
+        @Html.ActionLink("Add new members", "Add")
     </p>
 </div>

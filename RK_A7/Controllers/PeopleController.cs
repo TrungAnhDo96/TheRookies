@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using RK_A7.Facades;
 using RK_A7.Interfaces;
 using RK_A7.Models;
+using RK_A7.Utilities;
 
 namespace RK_A6.Controllers
 {
@@ -10,10 +10,10 @@ namespace RK_A6.Controllers
         private readonly ILogger<PeopleController> _logger;
         private IPeopleFacade _facade;
 
-        public PeopleController(ILogger<PeopleController> logger)
+        public PeopleController(ILogger<PeopleController> logger, IPeopleFacade facade)
         {
             _logger = logger;
-            _facade = new PeopleFacade();
+            _facade = facade;
         }
 
         public IActionResult Index()
@@ -24,8 +24,7 @@ namespace RK_A6.Controllers
         public IActionResult Members()
         {
             var data = _facade.GetAllPeople();
-            ViewBag.Members = data;
-            return View();
+            return View(data);
         }
 
         public IActionResult MemberDetails(uint id)
@@ -46,6 +45,8 @@ namespace RK_A6.Controllers
         [HttpPost]
         public IActionResult Add(PersonModel model)
         {
+            DateTime inputDate = DateAgeUtility.ParseDate(model.DateOfBirth);
+            model.DateOfBirth = inputDate.ToString("dd/MM/yyyy");
             _facade.AddPerson(model);
 
             return RedirectToAction("Members");
@@ -58,14 +59,15 @@ namespace RK_A6.Controllers
             {
                 data = _facade.GetPerson(id);
             }
-            ViewBag.MemberToEdit = data;
-            return View();
+            return View(data);
         }
 
         [HttpPost]
         public IActionResult Edit(PersonModel model)
         {
-            _facade.AddPerson(model);
+            DateTime inputDate = DateAgeUtility.ParseDate(model.DateOfBirth);
+            model.DateOfBirth = inputDate.ToString("dd/MM/yyyy");
+            _facade.EditPerson(model);
 
             return RedirectToAction("Members");
         }

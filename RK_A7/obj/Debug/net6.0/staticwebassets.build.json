@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8NUTDDCOH1wBFkSwu1Npzr6/93NiBAh47CmhBaKBOgQ=",
+  "Hash": "cvsQgM43Nlvodf8P5Ej8vsc57cZdk2CH520/NkO5Kf4=",
   "Source": "RK_A7",
   "BasePath": "_content/RK_A7",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\wwwroot\\css\\_ViewStart.cshtml",
+      "SourceId": "RK_A7",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\wwwroot\\",
+      "BasePath": "_content/RK_A7",
+      "RelativePath": "css/_ViewStart.cshtml",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "wwwroot\\css\\_ViewStart.cshtml"
+    },
     {
       "Identity": "C:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\wwwroot\\css\\site.css",
       "SourceId": "RK_A7",

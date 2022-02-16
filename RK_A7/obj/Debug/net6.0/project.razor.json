@@ -16298,11 +16298,6 @@
   "RootNamespace": "RK_A7",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\Views\\Rookies\\BirthYearPage.cshtml",
-      "TargetPath": "Views\\Rookies\\BirthYearPage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -16333,11 +16328,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\Views\\Rookies\\Index.cshtml",
-      "TargetPath": "Views\\Rookies\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\Views\\People\\DeleteConfirmation.cshtml",
       "TargetPath": "Views\\People\\DeleteConfirmation.cshtml",
       "FileKind": "mvc"
@@ -16353,13 +16343,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\Views\\Rookies\\NamePage.cshtml",
-      "TargetPath": "Views\\Rookies\\NamePage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\Views\\Rookies\\Oldest.cshtml",
-      "TargetPath": "Views\\Rookies\\Oldest.cshtml",
+      "FilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\wwwroot\\css\\_ViewStart.cshtml",
+      "TargetPath": "wwwroot\\css\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16370,11 +16355,6 @@
     {
       "FilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A7\\Views\\Rookies\\GenderPage.cshtml",
-      "TargetPath": "Views\\Rookies\\GenderPage.cshtml",
       "FileKind": "mvc"
     },
     {
