@@ -36,6 +36,8 @@ namespace RK_A6.Controllers
         [HttpPost]
         public IActionResult Add(PersonModel model)
         {
+            DateTime inputDate = DateAgeUtility.ParseDate(model.DateOfBirth);
+            model.DateOfBirth = inputDate.ToString("dd/MM/yyyy");
             _facade.AddPerson(model);
 
             return RedirectToAction("Members");
