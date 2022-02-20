@@ -25,3 +25,7 @@ C:\Users\Trung Anh Do\TheRookies\RK_A8\obj\Debug\net6.0\RK_A8.dll
 C:\Users\Trung Anh Do\TheRookies\RK_A8\obj\Debug\net6.0\ref\RK_A8.dll
 C:\Users\Trung Anh Do\TheRookies\RK_A8\obj\Debug\net6.0\RK_A8.pdb
 C:\Users\Trung Anh Do\TheRookies\RK_A8\obj\Debug\net6.0\RK_A8.genruntimeconfig.cache
+C:\Users\Trung Anh Do\TheRookies\RK_A8\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Trung Anh Do\TheRookies\RK_A8\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Trung Anh Do\TheRookies\RK_A8\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Trung Anh Do\TheRookies\RK_A8\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll

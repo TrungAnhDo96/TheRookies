@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using RK_A8.DB;
+using RK_A8.Interface;
+using RK_A8.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<TaskContext>(options => options.UseInMemoryDatabase("ToDoTask"));
+builder.Services.AddTransient<IToDoTaskService, ToDoTaskService>();
 
 var app = builder.Build();
 

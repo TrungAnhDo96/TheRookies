@@ -1,55 +1,60 @@
 using Microsoft.AspNetCore.Mvc;
-using RK_A6.DB;
-using RK_A8.Entities;
+using RK_A8.DTO;
+using RK_A8.Interface;
 
 namespace RK_A8.Controllers
 {
     [ApiController]
-    [Produces("application/json")]
     [Route("[controller]")]
     public class TaskController : ControllerBase
     {
-        public TaskController() { }
+        private IToDoTaskService _service;
+
+        public TaskController(IToDoTaskService service)
+        {
+            _service = service;
+        }
 
         [HttpGet("{id}")]
-        public ToDoTask Get(int id)
+        public DTOTask Get(int id)
         {
-            if (id > ToDoTaskDB.Instance.MaxKey) return null;
-            return ToDoTaskDB.Instance.ToDoTasks[id];
+            return _service.GetTask(id);
         }
 
         [HttpGet]
-        public List<ToDoTask> Get()
+        public List<DTOTask> Get()
         {
-            return ToDoTaskDB.Instance.ToDoTasks.Values.ToList();
+            return _service.GetAllTasks();
         }
 
         [HttpPost]
-        public void Post([FromBody] IEnumerable<ToDoTask> tasks)
+        public void Post([FromBody] DTOTask task)
         {
-            foreach (ToDoTask task in tasks)
-            {
-                ToDoTaskDB.Instance.MaxKey++;
-                task.Id = ToDoTaskDB.Instance.MaxKey;
-                ToDoTaskDB.Instance.ToDoTasks[ToDoTaskDB.Instance.MaxKey] = task;
-            }
+            _service.AddTask(task);
+        }
+
+        [HttpPost("/AddTasks")]
+        public void AddTasks([FromBody] List<DTOTask> tasks)
+        {
+            _service.AddTasks(tasks);
         }
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] ToDoTask task)
+        public void Put(int id, [FromBody] DTOTask task)
         {
-            if (id <= ToDoTaskDB.Instance.MaxKey)
-            {
-                task.Id = id;
-                ToDoTaskDB.Instance.ToDoTasks[id] = task;
-            }
+            _service.UpdateTask(id, task);
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+            _service.DeleteTask(id);
         }
 
         [HttpDelete]
-        public void Delete([FromBody] IEnumerable<int> ids)
+        public void Delete([FromBody] List<int> ids)
         {
-            foreach (int id in ids)
-                ToDoTaskDB.Instance.ToDoTasks.Remove(id);
+            _service.DeleteTasks(ids);
         }
     }
 }

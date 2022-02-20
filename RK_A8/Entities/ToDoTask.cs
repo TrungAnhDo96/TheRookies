@@ -1,14 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace RK_A8.Entities
 {
     public class ToDoTask
     {
-        public ToDoTask(int id, string title, bool isCompleted = false)
-        {
-            Id = id;
-            Title = title;
-            IsCompleted = isCompleted;
-        }
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key, Column(Order = 0)]
         public int Id { get; set; }
 
         public string Title { get; set; }
