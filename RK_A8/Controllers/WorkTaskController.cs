@@ -22,13 +22,13 @@ namespace RK_A8.Controllers
         }
 
         [HttpGet]
-        public List<WorkTaskDTO> Get()
+        public List<WorkTaskDTO> GetAllTasks()
         {
             return _service.GetAllTasks();
         }
 
         [HttpPost]
-        public void Post([FromBody] WorkTaskDTO task)
+        public void AddTask([FromBody] WorkTaskDTO task)
         {
             _service.AddTask(task);
         }
@@ -40,19 +40,19 @@ namespace RK_A8.Controllers
         }
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] WorkTaskDTO task)
+        public void UpdateTask(int id, [FromBody] WorkTaskDTO task)
         {
             _service.UpdateTask(id, task);
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void DeleteTask(int id)
         {
             _service.DeleteTask(id);
         }
 
         [HttpDelete]
-        public void Delete([FromBody] List<int> ids)
+        public void DeleteTasks([FromBody] List<int> ids)
         {
             _service.DeleteTasks(ids);
         }
