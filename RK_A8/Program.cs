@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<TaskContext>(options => options.UseInMemoryDatabase("ToDoTask"));
+builder.Services.AddDbContext<WorkTaskContext>(options => options.UseInMemoryDatabase("ToDoTask"));
 builder.Services.AddTransient<IWorkTaskService, WorkTaskService>();
 
 var app = builder.Build();

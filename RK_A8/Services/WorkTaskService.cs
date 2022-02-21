@@ -8,20 +8,20 @@ namespace RK_A8.Services
 {
     public class WorkTaskService : IWorkTaskService
     {
-        private TaskContext _context;
+        private WorkTaskContext _context;
 
-        public WorkTaskService(TaskContext context)
+        public WorkTaskService(WorkTaskContext context)
         {
             _context = context;
         }
 
-        public void AddTask(DTOTask task)
+        public void AddTask(WorkTaskDTO task)
         {
             _context.Tasks.Add(new WorkTask() { Title = task.Title, IsCompleted = task.IsCompleted });
             _context.SaveChanges();
         }
 
-        public void AddTasks(List<DTOTask> tasks)
+        public void AddTasks(List<WorkTaskDTO> tasks)
         {
             var addingTasks = tasks.Select(task => task.DTOToEntity());
             _context.Tasks.AddRange(addingTasks);
@@ -48,22 +48,22 @@ namespace RK_A8.Services
             }
         }
 
-        public List<DTOTask> GetAllTasks()
+        public List<WorkTaskDTO> GetAllTasks()
         {
-            List<DTOTask> result = _context.Tasks.Select(task => task.EntityToDTO()).ToList();
+            List<WorkTaskDTO> result = _context.Tasks.Select(task => task.EntityToDTO()).ToList();
             return result;
         }
 
-        public DTOTask GetTask(int id)
+        public WorkTaskDTO GetTask(int id)
         {
             WorkTask foundTask = _context.Tasks.Find(id);
-            DTOTask result = new DTOTask() { Title = "Not found", IsCompleted = false };
+            WorkTaskDTO result = new WorkTaskDTO() { Title = "Not found", IsCompleted = false };
             if (foundTask != null)
                 result = foundTask.EntityToDTO();
             return result;
         }
 
-        public void UpdateTask(int id, DTOTask task)
+        public void UpdateTask(int id, WorkTaskDTO task)
         {
             WorkTask taskToUpdate = _context.Tasks.Find(id);
             if (taskToUpdate != null)

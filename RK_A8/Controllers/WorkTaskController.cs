@@ -16,31 +16,31 @@ namespace RK_A8.Controllers
         }
 
         [HttpGet("{id}")]
-        public DTOTask Get(int id)
+        public WorkTaskDTO Get(int id)
         {
             return _service.GetTask(id);
         }
 
         [HttpGet]
-        public List<DTOTask> Get()
+        public List<WorkTaskDTO> Get()
         {
             return _service.GetAllTasks();
         }
 
         [HttpPost]
-        public void Post([FromBody] DTOTask task)
+        public void Post([FromBody] WorkTaskDTO task)
         {
             _service.AddTask(task);
         }
 
         [HttpPost("/AddTasks")]
-        public void AddTasks([FromBody] List<DTOTask> tasks)
+        public void AddTasks([FromBody] List<WorkTaskDTO> tasks)
         {
             _service.AddTasks(tasks);
         }
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] DTOTask task)
+        public void Put(int id, [FromBody] WorkTaskDTO task)
         {
             _service.UpdateTask(id, task);
         }

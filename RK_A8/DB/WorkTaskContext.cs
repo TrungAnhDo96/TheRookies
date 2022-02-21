@@ -3,9 +3,9 @@ using RK_A8.Entities;
 
 namespace RK_A8.DB
 {
-    public class TaskContext : DbContext
+    public class WorkTaskContext : DbContext
     {
-        public TaskContext(DbContextOptions<TaskContext> options) : base(options) { }
+        public WorkTaskContext(DbContextOptions<WorkTaskContext> options) : base(options) { }
 
         public DbSet<WorkTask> Tasks { get; set; }
     }

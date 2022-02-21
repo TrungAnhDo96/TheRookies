@@ -1,6 +1,6 @@
 namespace RK_A8.DTO
 {
-    public class DTOTask
+    public class WorkTaskDTO
     {
         public string Title { get; set; }
 
