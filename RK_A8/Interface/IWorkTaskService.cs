@@ -4,18 +4,18 @@ namespace RK_A8.Interface
 {
     public interface IWorkTaskService
     {
-        void AddTask(DTOTask task);
+        void AddTask(WorkTaskDTO task);
 
-        List<DTOTask> GetAllTasks();
+        List<WorkTaskDTO> GetAllTasks();
 
-        DTOTask GetTask(int id);
+        WorkTaskDTO GetTask(int id);
 
-        void UpdateTask(int id, DTOTask task);
+        void UpdateTask(int id, WorkTaskDTO task);
 
         void DeleteTask(int id);
 
         void DeleteTasks(List<int> ids);
 
-        void AddTasks(List<DTOTask> tasks);
+        void AddTasks(List<WorkTaskDTO> tasks);
     }
 }
