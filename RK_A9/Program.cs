@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<PeopleContext>(options => options.UseInMemoryDatabase("Person"));
+builder.Services.AddDbContext<PeopleContext>(options => options.UseInMemoryDatabase("People").UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 builder.Services.AddTransient<IPersonService, PersonService>();
 
 var app = builder.Build();

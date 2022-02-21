@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OgQe/0lMtng5UUSK5KaTNAh9Q7ZpS14YrhArLxxUuQ6O0ibXEtSs2xBpixUWIyt3epv8FiJyaBR9NDbu9pb41g==",
+  "dgSpecHash": "M2UYPyTkwbdL0NAUt4fdqE2MlNPZxh1BOkog0xQ7fblLFsZbWJD7STGZLQUKRZGjxRxzp5aCLIv3QKwPqAz/NA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A9\\RK_A9.csproj",
+  "projectFilePath": "C:\\Users\\Trung Anh Do\\TheRookies\\RK_A9\\RK_A9.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Trung Anh Do\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.2\\microsoft.entityframeworkcore.6.0.2.nupkg.sha512",
     "C:\\Users\\Trung Anh Do\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.2\\microsoft.entityframeworkcore.abstractions.6.0.2.nupkg.sha512",

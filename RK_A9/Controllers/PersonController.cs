@@ -38,22 +38,10 @@ namespace RK_A9.Controllers
             return _service.GetAllPeople();
         }
 
-        [HttpGet("{name}")]
-        public List<PersonDTO> GetPersonByName(string name)
+        [HttpGet("filter")]
+        public List<PersonDTO> FilterPerson([FromQuery] FilterPersonDTO filterParam)
         {
-            return _service.FilterPersonByName(name);
-        }
-
-        [HttpGet("{gender}")]
-        public List<PersonDTO> GetPersonByGender(string gender)
-        {
-            return _service.FilterPersonByGender(gender);
-        }
-
-        [HttpGet("{birthPlace}")]
-        public List<PersonDTO> GetPersonByBirthPlace(string birthPlace)
-        {
-            return _service.FilterPersonByBirthPlace(birthPlace);
+            return _service.Filter(filterParam);
         }
     }
 }

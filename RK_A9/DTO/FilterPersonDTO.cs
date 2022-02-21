@@ -1,17 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using RK_A9.Enums;
 
 namespace RK_A9.DTO
 {
-    public class PersonDTO
+    public class FilterPersonDTO
     {
         public string FirstName { get; set; }
-
         public string LastName { get; set; }
 
-        public string DateOfBirth { get; set; }
-
         public Gender Gender { get; set; }
-
         public string BirthPlace { get; set; }
     }
+
 }

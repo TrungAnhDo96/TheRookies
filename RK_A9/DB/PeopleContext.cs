@@ -6,7 +6,7 @@ namespace RK_A9.DB
 {
     public class PeopleContext : DbContext
     {
-        private static readonly List<Person> INIT_LIST = new List<Person>() {
+        private static readonly Person[] InitData = new Person[36] {
             new Person() { Id = 1, FirstName = "Do", LastName = "Trung Anh", DateOfBirth = new DateTime(1996, 8, 12), Gender = Gender.Male, BirthPlace = "Hanoi" },
             new Person() { Id = 2, FirstName = "Nguyen", LastName = "Van Phuc", DateOfBirth = new DateTime(2000,1,1), Gender = Gender.Male, BirthPlace = ""},
             new Person() { Id = 3, FirstName = "Do", LastName = "Ngoc Anh", DateOfBirth = new DateTime(1994,1,1), Gender = Gender.Male, BirthPlace = "Ha Noi"},
@@ -51,7 +51,8 @@ namespace RK_A9.DB
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Person>().HasData(INIT_LIST);
+            modelBuilder.Entity<Person>().HasKey(p => p.Id);
+            modelBuilder.Entity<Person>().HasData(InitData);
         }
     }
 }

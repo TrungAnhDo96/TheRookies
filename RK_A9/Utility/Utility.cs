@@ -13,7 +13,7 @@ namespace RK_A9.Utilities
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
                 DateOfBirth = DateTime.Parse(dto.DateOfBirth),
-                Gender = (Gender)Enum.Parse(typeof(Gender), dto.Gender),
+                Gender = dto.Gender,
                 BirthPlace = dto.BirthPlace
             };
             return result;
@@ -26,7 +26,7 @@ namespace RK_A9.Utilities
                 FirstName = entity.FirstName,
                 LastName = entity.LastName,
                 DateOfBirth = entity.DateOfBirth.ToString("dd/MM/yyyy"),
-                Gender = entity.Gender.ToString(),
+                Gender = entity.Gender,
                 BirthPlace = entity.BirthPlace
             };
             return result;

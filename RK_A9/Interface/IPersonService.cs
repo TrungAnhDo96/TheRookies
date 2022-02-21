@@ -13,10 +13,6 @@ namespace RK_A9.Interface
 
         List<PersonDTO> GetAllPeople();
 
-        List<PersonDTO> FilterPersonByName(string name);
-
-        List<PersonDTO> FilterPersonByGender(string gender);
-
-        List<PersonDTO> FilterPersonByBirthPlace(string birthPlace);
+        List<PersonDTO> Filter(FilterPersonDTO filterDTO);
     }
 }
