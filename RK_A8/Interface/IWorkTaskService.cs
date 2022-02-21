@@ -2,7 +2,7 @@ using RK_A8.DTO;
 
 namespace RK_A8.Interface
 {
-    public interface IToDoTaskService
+    public interface IWorkTaskService
     {
         void AddTask(DTOTask task);
 

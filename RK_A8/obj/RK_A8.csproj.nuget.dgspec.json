@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Trung Anh Do\\TheRookies\\RK_A8\\RK_A8.csproj": {}
+    "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A8\\RK_A8.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Trung Anh Do\\TheRookies\\RK_A8\\RK_A8.csproj": {
+    "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A8\\RK_A8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Trung Anh Do\\TheRookies\\RK_A8\\RK_A8.csproj",
+        "projectUniqueName": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A8\\RK_A8.csproj",
         "projectName": "RK_A8",
-        "projectPath": "C:\\Users\\Trung Anh Do\\TheRookies\\RK_A8\\RK_A8.csproj",
+        "projectPath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A8\\RK_A8.csproj",
         "packagesPath": "C:\\Users\\Trung Anh Do\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Trung Anh Do\\TheRookies\\RK_A8\\obj\\",
+        "outputPath": "c:\\Users\\Trung Anh Do\\TheRookies\\RK_A8\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -8,9 +8,9 @@ namespace RK_A8.Controllers
     [Route("[controller]")]
     public class TaskController : ControllerBase
     {
-        private IToDoTaskService _service;
+        private IWorkTaskService _service;
 
-        public TaskController(IToDoTaskService service)
+        public TaskController(IWorkTaskService service)
         {
             _service = service;
         }

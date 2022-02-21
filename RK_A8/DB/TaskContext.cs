@@ -7,6 +7,6 @@ namespace RK_A8.DB
     {
         public TaskContext(DbContextOptions<TaskContext> options) : base(options) { }
 
-        public DbSet<ToDoTask> Tasks { get; set; }
+        public DbSet<WorkTask> Tasks { get; set; }
     }
 }

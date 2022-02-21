@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<TaskContext>(options => options.UseInMemoryDatabase("ToDoTask"));
-builder.Services.AddTransient<IToDoTaskService, ToDoTaskService>();
+builder.Services.AddTransient<IWorkTaskService, WorkTaskService>();
 
 var app = builder.Build();
 

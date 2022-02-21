@@ -6,18 +6,18 @@ using RK_A8.Utilities;
 
 namespace RK_A8.Services
 {
-    public class ToDoTaskService : IToDoTaskService
+    public class WorkTaskService : IWorkTaskService
     {
         private TaskContext _context;
 
-        public ToDoTaskService(TaskContext context)
+        public WorkTaskService(TaskContext context)
         {
             _context = context;
         }
 
         public void AddTask(DTOTask task)
         {
-            _context.Tasks.Add(new ToDoTask() { Title = task.Title, IsCompleted = task.IsCompleted });
+            _context.Tasks.Add(new WorkTask() { Title = task.Title, IsCompleted = task.IsCompleted });
             _context.SaveChanges();
         }
 
@@ -30,7 +30,7 @@ namespace RK_A8.Services
 
         public void DeleteTask(int id)
         {
-            ToDoTask foundTask = _context.Tasks.Find(id);
+            WorkTask foundTask = _context.Tasks.Find(id);
             if (foundTask != null)
             {
                 _context.Tasks.Remove(foundTask);
@@ -56,7 +56,7 @@ namespace RK_A8.Services
 
         public DTOTask GetTask(int id)
         {
-            ToDoTask foundTask = _context.Tasks.Find(id);
+            WorkTask foundTask = _context.Tasks.Find(id);
             DTOTask result = new DTOTask() { Title = "Not found", IsCompleted = false };
             if (foundTask != null)
                 result = foundTask.EntityToDTO();
@@ -65,7 +65,7 @@ namespace RK_A8.Services
 
         public void UpdateTask(int id, DTOTask task)
         {
-            ToDoTask taskToUpdate = _context.Tasks.Find(id);
+            WorkTask taskToUpdate = _context.Tasks.Find(id);
             if (taskToUpdate != null)
             {
                 taskToUpdate.Title = task.Title;
