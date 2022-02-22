@@ -39,7 +39,6 @@ namespace RK_A9.Services
             {
                 personToUpdate = person.DTOToEntity();
                 personToUpdate.Id = id;
-
                 _context.People.Update(personToUpdate);
                 _context.SaveChanges();
             }
@@ -59,6 +58,7 @@ namespace RK_A9.Services
                person.Gender == filterDTO.Gender ||
                (!string.IsNullOrEmpty(filterDTO.BirthPlace) && person.BirthPlace.ToLower() == filterDTO.BirthPlace.ToLower())
             );
+
             return filteredList.Select(entity => entity.EntityToDTO()).ToList();
         }
     }
