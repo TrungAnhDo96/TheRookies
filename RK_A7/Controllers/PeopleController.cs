@@ -3,7 +3,7 @@ using RK_A7.Interfaces;
 using RK_A7.Models;
 using RK_A7.Utilities;
 
-namespace RK_A6.Controllers
+namespace RK_A7.Controllers
 {
     public class PeopleController : Controller
     {
