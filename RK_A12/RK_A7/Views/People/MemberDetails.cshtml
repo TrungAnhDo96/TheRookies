@@ -1,0 +1,40 @@
+@model RK_A7.Models.PersonModel
+@{
+    ViewData["Title"] = "Members";
+}
+
+<div class="text-center">
+    <h1 class="display-4">List of members</h1>
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Date Of Birth</th>
+            <th>Age</th>
+            <th>Phone Number</th>
+            <th>BirthPlace</th>
+            <th>Graduated</th>
+            <th>Actions</th>
+        </tr>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.FirstName</td>
+            <td>@Model.LastName</td>
+            <td>@Model.Gender</td>
+            <td>@Model.DateOfBirth</td>
+            <td>@Model.Age</td>
+            <td>@Model.PhoneNumber</td>
+            <td>@Model.BirthPlace</td>
+            <td>@Model.IsGraduated</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { id = @Model.Id }) | @Html.ActionLink("Delete",
+                "Delete", new {id=@Model.Id}, new {onclick="return confirm('Are you sure you want to delete this record?')"})</td>
+        </tr>
+    </table>
+
+    <p>
+        @Html.ActionLink("Return to list", "Members")
+    </p>
+</div>

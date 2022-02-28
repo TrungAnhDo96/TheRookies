@@ -1,0 +1,30 @@
+@model IEnumerable<RK_A7.Models.PersonModel>;
+@{
+    ViewData["Title"] = "Members";
+}
+
+<div>
+    <h1 class="display-4">List of members</h1>
+    <p>
+        <a href="#bottom">Jump to bottom</a>
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        @foreach (var member in @Model)
+        {
+            var fullname = member.FirstName + ' ' + member.LastName;
+
+            <tr>
+                <td>@member.Id</td>
+                <td>@Html.ActionLink((string)@fullname, "MemberDetails", new { id = member.Id})</td>
+            </tr>
+        }
+    </table>
+    <p>
+        @Html.ActionLink("Add new members", "Add")
+    </p>
+</div>
