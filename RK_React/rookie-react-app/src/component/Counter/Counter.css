@@ -1,0 +1,9 @@
+button {
+  margin: 1em;
+}
+
+.count-number {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+}
